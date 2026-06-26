@@ -1,0 +1,168 @@
+/* sidebar -manu */
+.sidebar-menu{
+    background-color:#f1f1f1;
+    border: 1px solid white;
+    
+}
+.sidebar-menu .sidbar-ul .chat-text{
+  color: white;
+  position: absolute;
+}
+.sidebar-menu .sidbar-ul .f-awesome{
+    font-size:x-large;
+    color:gray;
+}
+.chat-text{
+    display:none;
+}
+
+.nav-link:hover .chat-text{
+    display: inline;
+    padding: 2px;
+    color:white;
+    text-align: center;
+    background-color: black;
+    border-radius:5px;
+    margin:5px;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+ 
+  .chat-text {
+    display: none;
+    width:80px
+  }
+
+  .nav-link i {
+    font-size: 18px;
+  }
+}
+
+.icon-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.icon-btn i {
+    font-size: 20px;
+    transition: 0.3s;
+    border: none;
+    color:black;
+}
+
+/* sidebar-manu Tooltip */
+
+.tooltip-text {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+}
+
+/* Hover effect */
+.icon-btn:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* search-bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-left: 30px;
+    padding: 8px 12px;
+    background: #f1f1f1;
+    border-radius: 25px;   /* main rounding */
+}
+
+.search-bar i {
+    margin-right: 8px;
+    color: gray;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}
+/* group btn */
+.group-btn .navbar-nav {
+    display: flex;
+    flex-wrap: wrap;   /* allows small screens */
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+.group-btn .allbtn{
+ color: black;
+ font-weight: bold;
+}
+/* Buttons style */
+.group-btn button {
+    border: none;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #f1f1f1;
+    font-size: 14px;
+}
+
+/* Optional active hover */
+.group-btn button:hover {
+    background: black;
+    color: white;
+}
+
+.chat-body {
+    background-color: #f1f1f1;
+    height: 80%;
+    padding: 15px; /* scroll if messages exceed height */
+}
+
+.message-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.message-row.sent {
+    justify-content: flex-end;
+}
+
+.message-row.received {
+    justify-content: flex-start;
+}
+
+.message {
+    max-width: 70%;       /* keep inside background */
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.message.sent {
+    background: #d9fdd3;
+    border-top-right-radius: 0;
+}
+
+.message.received {
+    background: white;
+    border-top-left-radius: 0;
+}
