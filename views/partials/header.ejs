@@ -21,14 +21,13 @@
 </head>
 
 <body>
-
     <div class="container-fluid vh-100">
         <div class="row vh-100">
             <!-- Sidebar Menu -->
             <div class="col-sm-3 col-md-2 col-lg-1 border border-2 sidebar-menu p-0">
                 <ul class="nav flex-column h-100 sidbar-ul">
                     <li class="nav-item pt-2">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="<% '/' %>">
                             <i class="f-awesome fa-solid fa-comment"></i>
                             <span class="chat-text">Chats</span>
                         </a>
@@ -137,16 +136,17 @@
                         <tbody>
                             <tr>
                                 <th>
-                                    <a href="chat.html" class="chat-link text-decoration-none text-dark">
+                                    <a href="/chat/<%= user.id %>" class="chat-link text-decoration-none text-dark">
                                         <div
                                             class="chat-item d-flex justify-content-between align-items-center p-3 border-bottom">
                                             <!-- Left Side -->
+                                                
                                             <div class="d-flex align-items-center">
-                                                <img src="https://i.pravatar.cc/50?img=1" class="rounded-circle me-3"
+                                                <img src="<%= /images/user.profile_photo_url %>" class="rounded-circle me-3"
                                                     alt="user">
 
                                                 <div>
-                                                    <h6 class="mb-0">John Doe</h6>
+                                                    <h6 class="mb-0"><%= user.username %></h6>
                                                     <small class="text-muted">
                                                         <i class="typing-message bi bi-pencil-fill"></i> Typing...
                                                     </small>
